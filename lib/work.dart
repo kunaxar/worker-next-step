@@ -30,7 +30,7 @@ class _AddWorkState extends State<AddWork> {
           child: Column(children: [
             LinearProgressIndicator(value: (step + 1) / 3, color: orange, backgroundColor: const Color(0xFFEDE5DA)),
             title(steps[step], step == 2 ? 'Tap everything you really did on this job.' : null),
-            Expanded(child: SingleChildScrollView(padding: const EdgeInsets.fromLTRB(20, 4, 20, 20), child: [stepTrade(), stepWhere(), stepTasks()][step])),
+            Expanded(child: SingleChildScrollView(padding: const EdgeInsets.fromLTRB(20, 4, 20, 20), child: (step == 0 ? stepTrade() : step == 1 ? stepWhere() : stepTasks()))),
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
               child: Row(children: [
