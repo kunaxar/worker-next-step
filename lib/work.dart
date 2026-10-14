@@ -54,7 +54,7 @@ class _AddWorkState extends State<AddWork> {
       setState(() => step++);
     } else {
       final done = trade!.tasks.where(picked.contains).toList();
-      Navigator.pop(context, Work(trade!, emp.text.trim(), now ? '\$startYear - now' : '\$startYear - \$endYear', done));
+      Navigator.pop(context, Work(trade!, emp.text.trim(), now ? '$startYear - now' : '$startYear - $endYear', done));
     }
   }
 
