@@ -24,7 +24,8 @@ class Cred {
   final bool verified;
   final Color color;
   final String? id;
-  Cred(this.name, this.type, this.issuer, this.expires, this.verified, this.color, {this.id});
+  final bool pending; // preview only: expiry not chosen yet
+  Cred(this.name, this.type, this.issuer, this.expires, this.verified, this.color, {this.id, this.pending = false});
 }
 
 final List<Cred> creds = [
@@ -74,6 +75,7 @@ Widget pill(String text, Color bg, Color fg, [IconData? icon]) => Container(
 
 // Expiry and verification are separate labels, each a word plus a color.
 Widget expiryPill(Cred c, {bool onDark = false}) {
+  if (c.pending) return pill('Expiry not set yet', const Color(0xFFE4E7EB), ink);
   if (c.expires == null) return pill('No expiry date', const Color(0xFFE4E7EB), ink);
   final days = c.expires!.difference(today).inDays;
   if (days < 0) return pill('Expired ${dmy(c.expires!)}', const Color(0xFFFFE3E3), const Color(0xFFC92A2A), Icons.error_outline);
