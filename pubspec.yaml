@@ -1,0 +1,12 @@
+name: worker_next_step
+description: Consumer-first prototype - record what you did on the job, see what the trade pays, find the next step. Fictional demo data only.
+publish_to: none
+version: 0.1.0
+environment:
+  sdk: ^3.5.0
+dependencies:
+  flutter:
+    sdk: flutter
+  url_launcher: ^6.3.0
+flutter:
+  uses-material-design: true
