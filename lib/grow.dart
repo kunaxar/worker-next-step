@@ -38,7 +38,7 @@ class PayTab extends StatelessWidget {
               const SizedBox(height: 10),
               const Text('Half of workers earn more, half earn less. Local pay can be higher or lower. Not a promise of what you will earn.', style: TextStyle(fontSize: 13, color: grey)),
               const Divider(height: 28),
-              Text('${money(t.jobs)} people work as ${t.name.toLowerCase()}s across the US. Average: ${money(t.mean)} a year.', style: const TextStyle(fontSize: 13.5)),
+              Text('${money(t.jobs).substring(1)} people work as ${t.name.toLowerCase()}s across the US. Average: ${money(t.mean)} a year.', style: const TextStyle(fontSize: 13.5)),
             ]),
           ),
         ),
