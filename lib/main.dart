@@ -39,7 +39,7 @@ class _ShellState extends State<Shell> {
   int tab = int.tryParse(Uri.base.queryParameters['tab'] ?? '') ?? 0;
   @override
   Widget build(BuildContext context) {
-    final pages = [const WalletTab(), const WorkTab(), const GrowTab(), const ProfileTab()];
+    final pages = <Widget>[WalletTab(), WorkTab(), GrowTab(), ProfileTab()];
     return Scaffold(
       body: Center(
         child: ConstrainedBox(
