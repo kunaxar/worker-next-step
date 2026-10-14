@@ -91645,17 +91645,20 @@ F(a){var s,r,q,p,o,n=this,m=null,l=n.d,k=l+1,j=A.awz(m,B.hq,A.aU("Add a job  ("+
 k=A.a6n(B.cW,B.aO,m,k/3)
 s=["What kind of work?","Where and when?","What did you do?"][l]
 s=A.Zq(s,l===2?"Tap everything you really did on this job.":m)
-r=A.eo(A.ay_([n.a0E(),n.a0G(),n.a0D()][n.d],B.Gq),1)
-q=t.p
-p=A.b([],q)
-if(n.d>0)p.push(A.Md(B.B1,new A.aiX(n),m))
-p.push(B.iL)
 l=n.d
-if(l===0)o=n.e!=null
-else o=l===1?B.d.ic(n.f.a.a).length!==0:n.y.a!==0
+if(l===0)l=n.a0E()
+else l=l===1?n.a0G():n.a0D()
+l=A.eo(A.ay_(l,B.Gq),1)
+r=t.p
+q=A.b([],r)
+if(n.d>0)q.push(A.Md(B.B1,new A.aiX(n),m))
+q.push(B.iL)
+p=n.d
+if(p===0)o=n.e!=null
+else o=p===1?B.d.ic(n.f.a.a).length!==0:n.y.a!==0
 o=o?n.gafj():m
-p.push(A.Km(A.aU(l===2?"Save job ("+n.y.a+")":"Next",m,m,m,m,m,m,m),o,m))
-return A.NA(j,A.dS(new A.dd(B.eE,A.c2(A.b([k,s,r,new A.al(B.Gu,A.cT(p,B.K,B.u,B.B,0),m)],q),B.K,B.u,B.B),m),m,m),m)},
+q.push(A.Km(A.aU(p===2?"Save job ("+n.y.a+")":"Next",m,m,m,m,m,m,m),o,m))
+return A.NA(j,A.dS(new A.dd(B.eE,A.c2(A.b([k,s,l,new A.al(B.Gu,A.cT(q,B.K,B.u,B.B,0),m)],r),B.K,B.u,B.B),m),m,m),m)},
 afk(){var s,r,q,p,o,n=this
 if(n.d<2)n.a0(new A.aiV(n))
 else{s=n.e.y
