@@ -236,7 +236,7 @@ class _AddCredState extends State<AddCred> {
   static const types = [('Certificate', '📜'), ('License', '🪪'), ('Education', '🎓'), ('Training', '🦺'), ('Membership', '🤝'), ('Other', '📎')];
   static const issuers = ['NCCER', 'OSHA-authorized trainer', '360training', 'Demo Safety Org', 'Demo Training Co.', 'State licensing board'];
 
-  Cred preview() => Cred(name.text, type.isEmpty ? 'Credential' : type, issuer, noExpiry ? null : expiry, false, orange);
+  Cred preview() => Cred(name.text, type.isEmpty ? 'Credential' : type, issuer, noExpiry ? null : expiry, false, orange, pending: !noExpiry && expiry == null);
 
   @override
   Widget build(BuildContext context) {
