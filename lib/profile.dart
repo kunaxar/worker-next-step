@@ -101,7 +101,7 @@ class _ProfileTabState extends State<ProfileTab> {
               const SizedBox(height: 10),
               const Text('Marcus (demo)', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900)),
               const SizedBox(height: 8),
-              if (shareCreds) for (final c in creds.take(3)) Padding(padding: const EdgeInsets.only(bottom: 4), child: Text('• ${c.name} - ${c.verified ? 'Verified' : 'Not verified'}')),
+              if (shareCreds) for (final c in creds) Padding(padding: const EdgeInsets.only(bottom: 4), child: Text('• ${c.name} - ${c.verified ? 'Verified' : 'Not verified'}')),
               if (shareWork) for (final w in works) Padding(padding: const EdgeInsets.only(bottom: 4), child: Text('• ${w.trade.name}, ${w.employer} (${w.status == 'self' ? 'self-described' : 'waiting for supervisor'})')),
               if (!shareCreds && !shareWork) const Text('Nothing is shared right now.'),
             ]),
