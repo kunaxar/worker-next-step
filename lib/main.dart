@@ -39,12 +39,11 @@ class _ShellState extends State<Shell> {
   int tab = int.tryParse(Uri.base.queryParameters['tab'] ?? '') ?? 0;
   @override
   Widget build(BuildContext context) {
-    final pages = <Widget>[WalletTab(), WorkTab(), GrowTab(), ProfileTab()];
     return Scaffold(
       body: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 480),
-          child: SafeArea(child: AnimatedBuilder(animation: Listenable.merge([tradeIdx, rev]), builder: (_, __) => pages[tab])),
+          child: SafeArea(child: AnimatedBuilder(animation: Listenable.merge([tradeIdx, rev]), builder: (_, __) => <Widget>[WalletTab(), WorkTab(), GrowTab(), ProfileTab()][tab])),
         ),
       ),
       bottomNavigationBar: NavigationBar(
